@@ -63,7 +63,7 @@ Icon=%{name}
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=X-MandrivaLinux-MoreApplications-Sciences-Mathematics
+Categories=X-MandrivaLinux-MoreApplications-Sciences-Mathematics;
 EOF
 
 %clean 
