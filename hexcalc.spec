@@ -1,4 +1,4 @@
-%define release %mkrel 13
+%define release %mkrel 14
 
 Summary: A decimal, hexadecimal, octal and binary calculator
 Name: hexcalc
@@ -12,7 +12,6 @@ Source2: %name-32.png
 Source3: %name-48.png
 Buildroot: %_tmppath/%name-buildroot
 BuildRequires: X11-devel
-BuildRequires: xorg-x11
 BuildRequires: imake
 %description
 Hexcalc is a simple multi-radix calculator for programmers. The
