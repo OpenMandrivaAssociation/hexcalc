@@ -10,7 +10,6 @@ Source: ftp://ftp.x.org/R5contrib/hexcalc.tar.bz2
 Source1: %name-16.png
 Source2: %name-32.png
 Source3: %name-48.png
-Buildroot: %_tmppath/%name-buildroot
 BuildRequires: X11-devel
 BuildRequires: imake
 %description
