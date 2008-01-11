@@ -35,22 +35,11 @@ install -c -s hexcalc $RPM_BUILD_ROOT%_bindir
 install -c hexcalc.man $RPM_BUILD_ROOT%_mandir/man1/hexcalc.1x
 
 # Menu stuff
-mkdir -p %buildroot{%_menudir,%_miconsdir,%_iconsdir,%_liconsdir}
 
 install -m 644 %SOURCE1 %buildroot%_miconsdir/%name.png
 install -m 644 %SOURCE2 %buildroot%_iconsdir/%name.png
 install -m 644 %SOURCE3 %buildroot%_liconsdir/%name.png
 
-cat > %buildroot%_menudir/%name <<EOF
-?package(%{name}):\
-        command="%{_bindir}/%{name}"\
-        title="Hexcalc"\
-        longtitle="Hexadecimal calculator"\
-        needs="x11"\
-        section="More Applications/Sciences/Mathematics"\
-        icon="%{name}.png" \
-        xdg="true"
-EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -81,6 +70,5 @@ rm -rf $RPM_BUILD_ROOT
 %_miconsdir/%name.png
 %_iconsdir/%name.png
 %_liconsdir/%name.png
-%_menudir/%name
 %{_datadir}/applications/mandriva-%{name}.desktop
 
