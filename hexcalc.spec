@@ -1,4 +1,4 @@
-%define release %mkrel 14
+%define release %mkrel 16
 
 Summary: A decimal, hexadecimal, octal and binary calculator
 Name: hexcalc
