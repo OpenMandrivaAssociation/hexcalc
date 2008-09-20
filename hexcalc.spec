@@ -1,9 +1,7 @@
-%define release %mkrel 16
-
 Summary: A decimal, hexadecimal, octal and binary calculator
 Name: hexcalc
 Version: 1.11
-Release: %release
+Release: %mkrel 17
 License: GPL like
 Group: Sciences/Mathematics
 Source: ftp://ftp.x.org/R5contrib/hexcalc.tar.bz2
@@ -13,6 +11,7 @@ Source3: %name-48.png
 Buildroot: %_tmppath/%name-buildroot
 BuildRequires: X11-devel
 BuildRequires: imake
+
 %description
 Hexcalc is a simple multi-radix calculator for programmers. The
 calculator operates in four modes (decimal, hexadecimal, octal and
@@ -35,11 +34,13 @@ install -c -s hexcalc $RPM_BUILD_ROOT%_bindir
 install -c hexcalc.man $RPM_BUILD_ROOT%_mandir/man1/hexcalc.1x
 
 # Menu stuff
+install -d %buildroot%_miconsdir
+install -d %buildroot%_iconsdir
+install -d %buildroot%_liconsdir
 
 install -m 644 %SOURCE1 %buildroot%_miconsdir/%name.png
 install -m 644 %SOURCE2 %buildroot%_iconsdir/%name.png
 install -m 644 %SOURCE3 %buildroot%_liconsdir/%name.png
-
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
