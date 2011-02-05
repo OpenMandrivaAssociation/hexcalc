@@ -1,7 +1,7 @@
 Summary: A decimal, hexadecimal, octal and binary calculator
 Name: hexcalc
 Version: 1.11
-Release: %mkrel 19
+Release: %mkrel 20
 License: GPL like
 Group: Sciences/Mathematics
 Source: ftp://ftp.x.org/R5contrib/hexcalc.tar.bz2
@@ -9,7 +9,9 @@ Source1: %name-16.png
 Source2: %name-32.png
 Source3: %name-48.png
 Buildroot: %_tmppath/%name-buildroot
-BuildRequires: X11-devel
+BuildRequires: libx11-devel
+BuildRequires: libxaw-devel
+BuildRequires: libxt-devel
 BuildRequires: imake
 
 %description
@@ -22,7 +24,7 @@ binary).
 
 %build
 xmkmf
-%make
+%make CCOPTIONS="%optflags" EXTRA_LDOPTIONS="%ldflags"
 
 %install
 rm -rf $RPM_BUILD_ROOT
