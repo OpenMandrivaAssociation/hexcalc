@@ -79,3 +79,62 @@ rm -rf $RPM_BUILD_ROOT
 %_liconsdir/%name.png
 %{_datadir}/applications/mandriva-%{name}.desktop
 
+
+
+%changelog
+* Sat Feb 05 2011 Funda Wang <fwang@mandriva.org> 1.11-20mdv2011.0
++ Revision: 636003
+- update desktop category
+- tighten BR
+
+* Fri Dec 10 2010 Oden Eriksson <oeriksson@mandriva.com> 1.11-19mdv2011.0
++ Revision: 619361
+- the mass rebuild of 2010.0 packages
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.11-18mdv2010.0
++ Revision: 429393
+- rebuild
+
+* Sat Sep 20 2008 Oden Eriksson <oeriksson@mandriva.com> 1.11-17mdv2009.0
++ Revision: 286173
+- fix build
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+    - drop old menu
+    - kill re-definition of %%buildroot on Pixel's request
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Wed Oct 24 2007 Olivier Thauvin <nanardon@mandriva.org> 1.11-14mdv2008.1
++ Revision: 101895
+- rebuild, avoid useless brequires
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill desktop-file-validate's error: string list key "Categories" in group "Desktop Entry" does not have a semicolon (";") as trailing character
+
+
+* Sun Aug 06 2006 Olivier Thauvin <nanardon@mandriva.org>
++ 08/06/06 21:24:39 (53681)
+- xdg menu
+
+* Sun Aug 06 2006 Olivier Thauvin <nanardon@mandriva.org>
++ 08/06/06 21:18:06 (53676)
+Import hexcalc
+
+* Mon Oct 03 2005 Nicolas Lécureuil <neoclust@mandriva.org> 1.11-12mdk
+- BuildRequires fix
+
+* Fri Apr 08 2005 Olivier Thauvin <nanardon@mandrake.org> 1.11-11mdk
+- fix buildrequires for 64 bits
+
+* Fri Feb 04 2005 Sylvie Terjan <erinmargault@mandrake.org> 1.11-9mdk
+- birthday release
+
+* Fri Jan 23 2004 Olivier Thauvin <thauvin@aerov.jussieu.fr> 1.11-8mdk
+- 1st mdk package
+
