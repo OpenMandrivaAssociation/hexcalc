@@ -1,7 +1,7 @@
 Summary:	A decimal, hexadecimal, octal and binary calculator
 Name:		hexcalc
 Version:	1.11
-Release:	22
+Release:	23
 License:	GPL-like
 Group:		Sciences/Mathematics
 Source0:	ftp://ftp.x.org/R5contrib/hexcalc.tar.bz2
